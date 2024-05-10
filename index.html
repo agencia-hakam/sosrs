@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS RS</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- responsive -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="assets/css/animation.css">
+
+
+
+
+</head>
+
+<body>
+    <main class="overflow-hidden">
+        <header class="hero">
+            <!-- hero background -->
+            <div class="hero_bg"></div>
+            <div class="container">
+                <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="slider_caption">
+                                <div class="slider_content">
+                                    <div class="item">
+                                        <div class="logo">
+                                            <img src="./assets/images/logo.svg" alt="logo">
+                                        </div>
+                                    </div>
+                                    <div class="blue-line"></div>
+                                    <div class="item">
+                                        <video id="meuVideo" width="300" height="540" controls>
+                                            <source src="./assets/videos/IMG_8598.mov" type="video/quicktime">
+                                            <source src="./assets/videos/IMG_8598.mp4" type="video/mp4">
+                                            Seu navegador não suporta o elemento de vídeo.
+                                        </video>
+                                    </div>
+                                </div>
+                                <!-- Alteração do botão para reproduzir o vídeo -->
+                                <button id="playButton" class="u_btn slider_btn"><span>Assista ao vídeo sobre nossa
+                                        causa</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="services" class="services">
+            <div class="container">
+                <div class="wrapper">
+                    <p>Diante de tudo que aconteceu no Rio Grande do Sul, é impossível não sermos impactados e sentir a
+                        necessidade de agir. Além de doar água, comida, colchões e medicamentos, nós queríamos fazer
+                        mais: algo que pudesse devolver a dignidade e a esperança para essas pessoas. Queremos devolver
+                        a capacidade dessas pessoas sustentarem e reconstruírem as suas famílias.
+                    </p>
+                    <p>Pensando nisso, decidimos doar 50 franquias de uma das nossas empresas, equivalente a 1 milhão
+                        de reais. As pessoas selecionadas não terão custos com taxa de franquia, manutenção mensal ou
+                        qualquer outra taxa durante o contrato de 5 anos.
+                    </p>
+                    <p>Para que possamos realizar essa doação, precisamos que você preencha as informações abaixo,
+                        todas são obrigatórias:
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="forms" class="first_form">
+            <div class="productRating">
+                <div class="ratingHead">
+                    <h2>Preencher Formulário:</h2>
+                </div>
+                <form id="form1" method="post" action="mailer.php" novalidate>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone/WhatsApp:</label>
+                        <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rede-social">Rede Social:</label>
+                        <input type="text" class="form-control" id="rede-social" name="rede-social">
+                    </div>
+                    <div class="form-group">
+                        <label for="story">Conte a sua história:</label>
+                        <textarea class="form-control" id="story" name="story" required></textarea>
+                    </div>
+                    <button id="sub1" class="btn btn-primary" type="submit">Enviar</button>
+                </form>
+
+                <p style="font-size: 14px;"><span class="red">*Nossos critérios de avaliação consistirão na seleção de
+                        pessoas que tenham sofrido
+                        os maiores danos
+                        em decorrência dos incidentes e que também possuam um histórico empreendedor.</span></p>
+                <p style="font-size: 14px;"><span class="red"> *A avaliação dos selecionados será feita no dia
+                        03/06/2024.</span></p>
+
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="wrapper">
+                    <p>Sabemos que não conseguiremos ajudar a todos que necessitam neste momento, mas acreditamos que se
+                        cada um fizer a sua parte, poderemos alcançar esse objetivo juntos. Inclusive, convidamos nossos
+                        amigos empresários a considerarem iniciativas semelhantes para contribuir nessa jornada de
+                        reconstrução e renascimento.
+                    </p>
+                    <p>Agradecemos por compartilhar sua história com a gente e desejamos que Deus console o coração de
+                        todos vocês, além de uma recuperação o mais rápido possível.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer class="customer_feedback">
+            <div class="copyright">
+                © copyright 2024 by HAKAM
+            </div>
+        </footer>
+    </main>
+
+
+
+    <script>
+        // Função para verificar se o elemento está visível na tela
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Função para iniciar a reprodução do vídeo quando ele estiver visível na tela
+        function playVideoIfVisible() {
+            var video = document.getElementById('meuVideo');
+            if (isElementInViewport(video)) {
+                video.play();
+                // Remova o evento de rolagem depois de iniciar a reprodução do vídeo
+                window.removeEventListener('scroll', playVideoIfVisible);
+            }
+        }
+
+        // Adicione um evento de rolagem para verificar se o vídeo está visível na tela
+        window.addEventListener('scroll', playVideoIfVisible);
+
+        // Verifique se o vídeo é visível na primeira carga da página
+        playVideoIfVisible();
+    </script>
+
+    <script>
+        // Função para reproduzir o vídeo quando o botão for clicado
+        document.getElementById('playButton').addEventListener('click', function () {
+            var video = document.getElementById('meuVideo');
+            video.play();
+        });
+    </script>
+
+    <!-- Bootstrap 5 -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="assets/js/jQuery/jquery-3.6.4.min.js"></script>
+
+    <!-- My JS -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
